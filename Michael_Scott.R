@@ -22,6 +22,9 @@ twitter.text= twitter.text[-81]
 twitter.text = gsub("http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+", "", twitter.text)
 
 twitter.text = gsub("[^[:space:]]*???$", "", twitter.text)
+twitter.text = gsub("/", "", twitter.text)
+twitter.text = gsub("[\\]", "", twitter.text)
 
-twitter.corpus = Corpus(VectorSource(twitter.text))
+
+retweet = paste("Dwight,", twitter.text, sep = " ")
 
