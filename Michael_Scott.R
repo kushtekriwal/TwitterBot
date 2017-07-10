@@ -4,10 +4,10 @@ library(wordcloud)
 library(RColorBrewer)
 library(ggmap)
 
-consumer_key = "TkimlsBLO0yImQRkoPyXhUVVr"
-consumer_secret = "o0C0Oaf71HQT9VH73p90VwQgG6ELKJO3q6V66b8wzsmZteUDBm"
-access_token = "591002069-HpN0mLL4D8EKVC0BFtzhFLkC5OM93QRaAzsMs6rW"
-access_secret = "yBeIPg7CNLKGrDVVwZ2XzptOXfcPyDK4YuKcTloXZJgz5"
+consumer_key = "NK91vEe8rhbXNRrEqS10m0Rjl"
+consumer_secret = "rj6I417XKB13oyRUOnxRcaxNkbAXBaEOJ4HK6bMiaZSNQDCBvG"
+access_token = "884404333558804482-P4Y7f08sW7NVHi2eut0js1YuNYzmrdb"
+access_secret = "ARd9WkeAp7YFwYM1n6tUzPBeCTiepw8kUUcqZvXRaUG6Y"
 setup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)
 
 tweets = searchTwitter("#michaelscott", n = 73, lang = "en")
