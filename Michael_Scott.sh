@@ -1,3 +1,5 @@
+#!/usr/bin/Rscript
+
 library(twitteR)
 library(tm)
 library(wordcloud)
@@ -14,7 +16,7 @@ tweets = searchTwitter("#michaelscott", n = 73, lang = "en")
 
 twitter.text = sapply(tweets, function(x) x$getText())
 
-twitter.texts = do.call(rbind, lapply(tweets, function(x) x$toDataFrame()))
+twitter.texts=do.call(rbind, lapply(tweets, function(x) x$toDataFrame()))
 
 twitter.text= gsub("[^[:print:]]", "", twitter.text)
 twitter.text= twitter.text[-81]
@@ -25,5 +27,4 @@ twitter.text = gsub("[^[:space:]]*???$", "", twitter.text)
 twitter.text = gsub("/", "", twitter.text)
 twitter.text = gsub('\"', "", twitter.text, fixed = TRUE)
 
-# retweet = 
 paste("Dwight,", twitter.text, sep = " ")
