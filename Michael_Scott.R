@@ -25,5 +25,6 @@ twitter.text = gsub("[^[:space:]]*???$", "", twitter.text)
 twitter.text = gsub("/", "", twitter.text)
 twitter.text = gsub('\"', "", twitter.text, fixed = TRUE)
 
-# retweet = 
-paste("Dwight,", twitter.text, sep = " ")
+new.tweet = paste("Dwight,", twitter.text, sep = " ")
+updateStatus(new.tweet)
+
