@@ -10,7 +10,7 @@ access_token = "884404333558804482-P4Y7f08sW7NVHi2eut0js1YuNYzmrdb"
 access_secret = "ARd9WkeAp7YFwYM1n6tUzPBeCTiepw8kUUcqZvXRaUG6Y"
 setup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)
 
-tweets = searchTwitter("#michaelscott", n = 71, lang = "en")
+tweets = searchTwitter("#michaelscott", n = 75, lang = "en")
 
 twitter.text = sapply(tweets, function(x) x$getText())
 
@@ -24,6 +24,7 @@ twitter.text = gsub("http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9
 twitter.text = gsub("[^[:space:]]*???$", "", twitter.text)
 twitter.text = gsub("/", "", twitter.text)
 twitter.text = gsub('\"', "", twitter.text, fixed = TRUE)
+twitter.text = gsub("#michaelscott", "", twitter.text)
 
 new.tweet = paste("Dwight,", twitter.text, sep = " ")
-updateStatus(new.tweet[17])
+updateStatus(new.tweet[10])
