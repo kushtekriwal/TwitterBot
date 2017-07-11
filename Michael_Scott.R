@@ -19,7 +19,7 @@ twitter.texts = do.call(rbind, lapply(tweets, function(x) x$toDataFrame()))
 twitter.text= gsub("[^[:print:]]", "", twitter.text)
 twitter.text= twitter.text[-81]
 
-twitwitter.text = gsub("http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+", "", twitter.text)
+twitter.text = gsub("http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+", "", twitter.text)
 
 twitter.text = gsub("[^[:space:]]*???$", "", twitter.text)
 twitter.text = gsub("/", "", twitter.text)
