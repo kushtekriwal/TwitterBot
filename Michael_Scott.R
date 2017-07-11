@@ -26,5 +26,4 @@ twitter.text = gsub("/", "", twitter.text)
 twitter.text = gsub('\"', "", twitter.text, fixed = TRUE)
 
 new.tweet = paste("Dwight,", twitter.text, sep = " ")
-updateStatus(new.tweet)
-
+updateStatus(new.tweet[17])

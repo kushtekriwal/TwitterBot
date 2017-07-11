@@ -28,4 +28,7 @@ twitter.text = gsub("/", "", twitter.text)
 twitter.text = gsub('\"', "", twitter.text, fixed = TRUE)
 
 new.tweet = paste("Dwight,", twitter.text, sep = " ")
-updateStatus(new.tweet)
+if (as.numeric(Sys.time - tweet[[45]]$created) < 1) {
+  updateStatus(new.tweet[45])
+}
+
