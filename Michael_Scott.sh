@@ -29,6 +29,8 @@ twitter.text = gsub('\"', "", twitter.text, fixed = TRUE)
 
 new.tweet = paste("Dwight,", twitter.text, sep = " ")
 # if (as.numeric(Sys.time - tweet[[45]]$created) < 1) {
-  updateStatus(new.tweet[45])
+updateStatus(new.tweet[45])
 #}
 
+# Need to be able to post all tweets (possible restructure code as can only post one at a time)
+# Not to repear tweets
